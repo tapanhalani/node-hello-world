@@ -1,1 +1,4 @@
-# node-hello-world
+mongo-example
+=============
+
+A Dockerfile for a MongoDB server
