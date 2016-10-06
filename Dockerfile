@@ -5,10 +5,12 @@
 FROM ubuntu:14.04
 
 # Optionally set the maintainer
-MAINTAINER Andrew T. Baker <andrew.tork.baker@gmail.com>
+MAINTAINER Tapan Halani <tapanhalani231@gmail.com>
 
 # Following installation instructions from https://nodejs.org/en/download/package-manager/
 RUN sudo apt-get update
+
+RUN sudo apt-get -y install nano
 
 RUN sudo apt-get -y install curl
 
