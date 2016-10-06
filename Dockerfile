@@ -35,8 +35,7 @@ RUN apt-get install -y mongodb-org
 # Create MongoDB's default data directory (-p creates parent directories - in this case, /data)
 RUN mkdir -p /data/db
 
-# Because this database will run in a Docker container,
-# we must configure it to accept connctions from foreign hosts
+# Because this database will run in a Docker container,we must configure it to accept connctions from foreign hosts
 RUN echo "bind_ip = 0.0.0.0" >> /etc/mongodb.conf
 
 RUN mkdir /usr/local/node_project
