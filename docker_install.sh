@@ -1,3 +1,3 @@
 echo "hello tapan"
 
-docker ps
+curl --unix-socket /var/run/docker.sock http:/containers/json
