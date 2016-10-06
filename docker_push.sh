@@ -1,6 +1,3 @@
 #!/bin/bash
 
-ENCODED_OBJ=`base64 docker_hub_auth.txt`
-FINAL_OBJ="$(echo -e "${ENCODED_OBJ}" | tr -d '[[:space:]]')"
-echo -e "FINAL_OBJ='${FINAL_OBJ}'"
-curl -v  --unix-socket /var/run/docker.sock -H "X-Registry-Auth:$FINAL_OBJ" -X POST http:/images/tapanhalani/node-hello-world/push?tag=latest
+curl -v  --unix-socket /var/run/docker.sock -H 'X-Registry-Auth: eyB1c2VybmFtZTogdGFwYW5oYWxhbmksIHBhc3N3b3JkOiAyOG1hcmNoMTk5NCwgZW1haWw6IHRhcGFuaGFsYW5pMjMxQGdtYWlsLmNvbSB9Cg' -X POST http:/images/tapanhalani/node-hello-world/push?tag=latest
