@@ -41,7 +41,6 @@ RUN echo "bind_ip = 0.0.0.0" >> /etc/mongodb.conf
 
 RUN mkdir /usr/local/node_project
 COPY index.js /usr/local/node_project/index.js
-RUN cd /usr/local/node_project
 
 # Expose the MongoDB port
 EXPOSE 27017 80 443 8081
